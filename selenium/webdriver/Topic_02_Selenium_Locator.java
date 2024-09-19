@@ -63,9 +63,9 @@ public class Topic_02_Selenium_Locator {
         driver.findElement(By.cssSelector("#txtFirstname"));
 
         // Css vs Class
-        driver.findElement(By.cssSelector("input[id='txtCPassword']"));
-        driver.findElement(By.cssSelector("input#txtCPassword"));
-        driver.findElement(By.cssSelector("#txtCPassword"));
+        driver.findElement(By.cssSelector("input[class='inputsearch2']"));
+        driver.findElement(By.cssSelector("input.inputsearch2"));
+        driver.findElement(By.cssSelector(".inputsearch2"));
 
         // Css vs Name
         driver.findElement(By.cssSelector("input[name='txtPhone']"));
