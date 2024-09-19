@@ -2,6 +2,7 @@ package javaTester;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
@@ -29,12 +30,13 @@ public class Topic_01_DataType {
 
     //Class - Interface - Collection
     //Class
-    FirefoxDriver ffDriver = new FirefoxDriver();
+    //FirefoxDriver ffDriver = new FirefoxDriver();
     //Interface
-    WebDriver driver = new CrhomeDriver();
+    WebDriver driver = new ChromeDriver();
+
     //Collection
-    List<WebElement> textboxes = driver.findElements(By.cssSelector(""));
-    ArrayList<String> studentAddress = new ArrayList<String>();
+    //List<WebElement> textboxes = driver.findElements(By.cssSelector(""));
+    //ArrayList<String> studentAddress = new ArrayList<String>();
 
     public static void main(String[] args) {
         int var1 = 100;
