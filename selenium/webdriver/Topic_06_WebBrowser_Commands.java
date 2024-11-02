@@ -131,6 +131,93 @@ public class Topic_06_WebBrowser_Commands {
         driver.navigate().to("https://www.youtube.com/watch?v=bTLVe23UGlM&ab_channel=AutomationFC");
         driver.navigate().to(new URL("https://www.youtube.com/watch?v=bTLVe23UGlM&ab_channel=AutomationFC"));
 
+    }
+
+    public void TC_02_Web_Element(){
+        WebElement element = driver.findElement(By.cssSelector("input#search"));
+
+        // Xóa dữ liệu ở trong 1 editable element (có thể nhập được)
+        // textbox / text area / dropdown
+        element.clear();
+
+        // Nhập dữ liệu vào 1 editable element (nhập)
+        element.sendKeys("Le Tien Dat");
+
+        // 1 - Element cha dùng 1 loại locator - element con dùng 1 loại locator
+        driver.findElement(By.
+                cssSelector("form#search-form")).findElement(By.cssSelector("input#search"));
+
+        // 2 - Cả cha và con đều chung 1 loại locator
+        driver.findElement((By.cssSelector("form#search-form input#search")));
+
+        // Tìm 1 element với locator là tham số truyền vào
+        driver.findElement(By.cssSelector(""));
+
+        // Tìm nhiều element với locator là tham số truyền vào
+        driver.findElements(By.cssSelector(""));
+
+        // Click lên clickable element
+        // Button / Checkbox / Radio / Link / Image / Dropdown / Icon
+        element.click();
+
+        // Tương đương với submit thông tin gửi lên server
+        // Giả lập hành vi enter của end user
+        // Register / Login / Search / ...
+        element.submit();
+
+        // Verify thông tin hay dữ liệu đã action
+        // Kiểm tra 1 element có hiển thị hay không?
+        // Áp dụng cho tất cả các loại element
+        element.isDisplayed();
+
+        // Kiểm tra 1 element đã được chọn hay chưa?
+        // Áp dụng: Checkbox / radio / dropdown
+        element.isSelected();
+
+        // Kiểm tra 1 element có cho phép thao tác lên hay không?
+        // Cho phép sửa dữ liệu
+        // true = được phép chỉnh sửa hay thao tác
+        // false = bị disable
+        // test tính năng phân quyền
+        element.isEnabled();
+
+        // Lấy dữ liệu
+
+        // Lấy ra chiều rộng/ chiều cao của element
+        element.getSize();
+
+        // Lấy ra text của 1 element
+        element.getText();
+        element.getAttribute("placeholder");    // get text bằng attribute
+
+        // Shadow DOM
+        element.getShadowRoot();
+
+        // Dev front end dùng nhiều hơn tester - ít khi dùng
+        element.getAriaRole();
+        element.getDomProperty("");
+        element.getDomAttribute("");
+        element.getAccessibleName();
+
+        // Lấy ra thuộc tính liên quan tới CSS
+        // Font / Color / Background / Font Size / ...
+        element.getCssValue("font-size");
+
+        // Lấy ra vị trí của Element (gốc trên bên trái) so với màn hình browser
+        element.getLocation();
+
+        // Tổng hợp của getLocation() và getSize()
+        Rectangle elementRect = element.getRect();
+        elementRect.getDimension(); // = với getSize()
+        elementRect.getPoint(); // = với getLocation()
+
+        // Lấy ra tên thẻ HTML của element
+        element.getTagName();
+
+        // Take Screenshot (chụp hình lỗi)
+        element.getScreenshotAs(OutputType.FILE);
+        element.getScreenshotAs(OutputType.BYTES);
+        element.getScreenshotAs(OutputType.BASE64);
 
     }
 
