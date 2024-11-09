@@ -92,7 +92,7 @@ public class Topic_06_WebBrowser_Commands {
 
         //Set timeout để chờ cho đoạn code JS được thực thi thành công
         driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
-        driver.manage().timeouts().getScriptTimeout(Duration.ofSeconds(30));
+        //driver.manage().timeouts().getScriptTimeout(Duration.ofSeconds(30));
 
         //Cookie
         driver.manage().getCookies();
@@ -129,10 +129,11 @@ public class Topic_06_WebBrowser_Commands {
 
         //Đi đến 1 URL
         driver.navigate().to("https://www.youtube.com/watch?v=bTLVe23UGlM&ab_channel=AutomationFC");
-        driver.navigate().to(new URL("https://www.youtube.com/watch?v=bTLVe23UGlM&ab_channel=AutomationFC"));
+        //driver.navigate().to(new URL("https://www.youtube.com/watch?v=bTLVe23UGlM&ab_channel=AutomationFC"));
 
     }
 
+    @Test
     public void TC_02_Web_Element(){
         WebElement element = driver.findElement(By.cssSelector("input#search"));
 
