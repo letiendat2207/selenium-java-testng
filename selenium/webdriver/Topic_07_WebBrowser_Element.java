@@ -26,25 +26,25 @@ public class Topic_07_WebBrowser_Element {
     @Test
     public void TC_01_Verify_Url() {
         // Truy cập vào trang
-        driver.get("https://live.techpanda.org/");
+        driver.get("http://live.techpanda.org/");
 
         // Click MY ACCOUNT link tại footer
         driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
 
         // Verify url của Login Page
-        Assert.assertEquals(driver.getCurrentUrl(), "https://live.techpanda.org/index.php/customer/account/login/");
+        Assert.assertEquals(driver.getCurrentUrl(), "http://live.techpanda.org/index.php/customer/account/login/");
 
         // Click CREATE AN ACCOUNT button
         driver.findElement(By.xpath("//a[@class='button']")).click();
 
         // Verify url của Register Page
-        Assert.assertEquals(driver.getCurrentUrl(), "https://live.techpanda.org/index.php/customer/account/create/");
+        Assert.assertEquals(driver.getCurrentUrl(), "http://live.techpanda.org/index.php/customer/account/create/");
     }
 
     @Test
     public void TC_02_Verify_Title() {
         // Truy cập vào trang
-        driver.get("https://live.techpanda.org/");
+        driver.get("http://live.techpanda.org/");
 
         // Click MY ACCOUNT link tại footer
         driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
@@ -62,7 +62,7 @@ public class Topic_07_WebBrowser_Element {
     @Test
     public void TC_03_Navigate_Function() {
         // Truy cập vào trang
-        driver.get("https://live.techpanda.org/");
+        driver.get("http://live.techpanda.org/");
 
         // Click MY ACCOUNT link tại footer
         driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
@@ -71,13 +71,13 @@ public class Topic_07_WebBrowser_Element {
         driver.findElement(By.xpath("//a[@class='button']")).click();
 
         // Verify url của Register Page
-        Assert.assertEquals(driver.getCurrentUrl(), "https://live.techpanda.org/index.php/customer/account/create/");
+        Assert.assertEquals(driver.getCurrentUrl(), "http://live.techpanda.org/index.php/customer/account/create/");
 
         // Back lại trang Login Page
         driver.navigate().back();
 
         // Verify url của Login Page
-        Assert.assertEquals(driver.getCurrentUrl(), "https://live.techpanda.org/index.php/customer/account/login/");
+        Assert.assertEquals(driver.getCurrentUrl(), "http://live.techpanda.org/index.php/customer/account/login/");
 
         // Forward tới trang Register Page
         driver.navigate().forward();
@@ -89,7 +89,7 @@ public class Topic_07_WebBrowser_Element {
     @Test
     public void TC_04_Get_Page_Source_Code() {
         // Truy cập vào trang
-        driver.get("https://live.techpanda.org/");
+        driver.get("http://live.techpanda.org/");
 
         // Click MY ACCOUNT link tại footer
         driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
@@ -107,7 +107,7 @@ public class Topic_07_WebBrowser_Element {
     @Test
     public void TC_05_Check_Element_Is_Displayed() {
         // Truy cập vào trang
-        driver.get("https://automationfc.github.io/basic-form/index.html");
+        driver.get("http://automationfc.github.io/basic-form/index.html");
 
         if (driver.findElement(By.cssSelector("input#mail")).isDisplayed()) {
             driver.findElement(By.cssSelector("input#mail")).sendKeys("Automation Testing");
@@ -140,7 +140,7 @@ public class Topic_07_WebBrowser_Element {
     @Test
     public void TC_06_Check_Element_Is_Enable_Or_Disable() {
         // Truy cập vào trang
-        driver.get("https://automationfc.github.io/basic-form/index.html");
+        driver.get("http://automationfc.github.io/basic-form/index.html");
 
         if (driver.findElement(By.cssSelector("input#mail")).isEnabled()) {
             driver.findElement(By.cssSelector("input#mail")).sendKeys("Automation Testing");
@@ -227,7 +227,7 @@ public class Topic_07_WebBrowser_Element {
     @Test
     public void TC_07_Check_Element_Is_Selected() {
         // Truy cập vào trang
-        driver.get("https://automationfc.github.io/basic-form/index.html");
+        driver.get("http://automationfc.github.io/basic-form/index.html");
 
 
         driver.findElement(By.cssSelector("input#under_18")).click();
@@ -264,7 +264,7 @@ public class Topic_07_WebBrowser_Element {
     @Test
     public void TC_08_Register_Function_MailChimp() {
         // Truy cập vào trang
-        driver.get("https://login.mailchimp.com/signup/");
+        driver.get("http://login.mailchimp.com/signup/");
 
         // Truyền tên email
         driver.findElement(By.cssSelector("input#email")).clear();
@@ -335,7 +335,7 @@ public class Topic_07_WebBrowser_Element {
     @Test
     public void TC_09_Login_With_Empty_Email_And_Password() {
         // Truy cập vào trang
-        driver.get("https://live.techpanda.org/");
+        driver.get("http://live.techpanda.org/");
 
         driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
 
@@ -351,7 +351,7 @@ public class Topic_07_WebBrowser_Element {
     @Test
     public void TC_10_Login_With_Invalid_Email() {
         // Truy cập vào trang
-        driver.get("https://live.techpanda.org/");
+        driver.get("http://live.techpanda.org/");
 
         driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
 
@@ -365,7 +365,7 @@ public class Topic_07_WebBrowser_Element {
     @Test
     public void TC_11_Login_With_Password_Less_Than_6_Chars() {
         // Truy cập vào trang
-        driver.get("https://live.techpanda.org/");
+        driver.get("http://live.techpanda.org/");
 
         driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
 
@@ -379,7 +379,7 @@ public class Topic_07_WebBrowser_Element {
     @Test
     public void TC_12_Login_With_Incorrect_Password() {
         // Truy cập vào trang
-        driver.get("https://live.techpanda.org/index.php");
+        driver.get("http://live.techpanda.org/index.php");
 
         driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
 
