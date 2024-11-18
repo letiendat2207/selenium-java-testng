@@ -56,11 +56,7 @@ public class Topic_08_Textbox_TextArea_LiveTechPanda {
 
         driver.findElement(By.cssSelector("button[title='Register']")).click();
 
-        try {
-            Thread.sleep(3000); // Dừng 3 giây
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Thread.sleep(3000);
 
         Assert.assertEquals(driver.findElement(By.cssSelector("li.success-msg span")).getText(), "Thank you for registering with Main Website Store.");
 
@@ -83,11 +79,7 @@ public class Topic_08_Textbox_TextArea_LiveTechPanda {
 
         driver.findElement(By.cssSelector("button[title='Submit Review']")).click();
 
-        try {
-            Thread.sleep(3000); // Dừng 3 giây
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Thread.sleep(3000);
 
 
         Assert.assertEquals(driver.findElement(By.cssSelector("li.success-msg span")).getText(), "Your review has been accepted for moderation.");
