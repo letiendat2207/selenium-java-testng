@@ -23,7 +23,7 @@ public class Topic_10_HTML_Dropdown_List {
 
     @BeforeClass
     public void beforeClass() {
-        // C:\Users\DAT\AppData\Local\Microsoft\Edge\User Data\Profile 2
+
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.addArguments("--user-data-dir=C:/Users/DAT/AppData/Local/Microsoft/Edge/User Data/");
         edgeOptions.addArguments("--profile-directory=Profile 3");
@@ -83,7 +83,7 @@ public class Topic_10_HTML_Dropdown_List {
         driver.get("https://rode.com/en/support/where-to-buy");
         Thread.sleep(10000);
 
-        Assert.assertTrue(!(new Select(driver.findElement(By.cssSelector("select#country"))).isMultiple()));
+        Assert.assertFalse(new Select(driver.findElement(By.cssSelector("select#country"))).isMultiple());
 
         new Select(driver.findElement(By.cssSelector("select#country"))).selectByVisibleText(country);
         driver.findElement(By.cssSelector("input#map_search_query")).sendKeys(city);
