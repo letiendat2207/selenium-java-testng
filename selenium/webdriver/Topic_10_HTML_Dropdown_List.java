@@ -86,6 +86,7 @@ public class Topic_10_HTML_Dropdown_List {
         Assert.assertFalse(new Select(driver.findElement(By.cssSelector("select#country"))).isMultiple());
 
         new Select(driver.findElement(By.cssSelector("select#country"))).selectByVisibleText(country);
+        Thread.sleep(3000);
         driver.findElement(By.cssSelector("input#map_search_query")).sendKeys(city);
 
         driver.findElement(By.xpath("//button[text()='Search']")).click();
