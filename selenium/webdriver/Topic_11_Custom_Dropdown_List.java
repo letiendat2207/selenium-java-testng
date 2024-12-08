@@ -68,7 +68,7 @@ public class Topic_11_Custom_Dropdown_List {
         // vòng lặp đi qua từng thẻ item trong list trên
         for (WebElement element : dropdownList){
             // nếu item nào bằng với expected item thì click vào và break khỏi vòng lặp
-            if(element.getText().equals(itemText)){
+            if(element.getText().trim().equals(itemText)){
                 element.click();
                 break;
             }
