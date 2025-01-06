@@ -125,7 +125,6 @@ public class Topic_18_Action_P2 {
 
         // verify quit menu không còn hiển thị
         Assert.assertFalse(driver.findElement(By.cssSelector("li.context-menu-icon-quit")).isDisplayed());
-
     }
 
 
