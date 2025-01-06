@@ -26,8 +26,6 @@ public class Topic_17_Action_P1 {
     @BeforeClass
     public void beforeClass() {
         EdgeOptions edgeOptions = new EdgeOptions();
-        edgeOptions.addArguments("--user-data-dir=C:/Users/DAT/AppData/Local/Microsoft/Edge/User Data/");
-        edgeOptions.addArguments("--profile-directory=Profile 5");
         driver = new EdgeDriver(edgeOptions);
 
         //driver = new FirefoxDriver();
