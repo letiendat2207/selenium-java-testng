@@ -52,7 +52,6 @@ public class Topic_17_Action_P1 {
         driver.get("http://www.myntra.com/");
         Thread.sleep(5000);
 
-
         action.moveToElement(driver.findElement(By.xpath("//div[@class='desktop-navLink']/a[text()='Kids']")))
                 .pause(Duration.ofSeconds(3))
                 .perform();
