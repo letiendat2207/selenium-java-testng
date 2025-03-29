@@ -93,6 +93,6 @@ public class Topic_25_Wait_V_Explicit_III {
 
     @AfterClass
     public void afterClass() {
-        //driver.quit();
+        driver.quit();
     }
 }
