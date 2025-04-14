@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="UCL" verbose="1">
+    <test name="Run on CHROME">
+
+        // 1 - chạy theo package
+        <packages>
+            <package name="platformWeb"></package>
+            <package name="platformMobile"></package>
+        </packages>
+
+        // 2 - chạy theo class
+        <classes>
+            <class name="platformMobile.Mobile_01_User"></class>
+            <class name="platformMobile.Mobile_02_Payment"></class>
+            <class name="platformWeb.Web_01_User"></class>
+            <class name="platformWeb.Web_02_Product"></class>
+        </classes>
+
+        // chạy theo group
+        // group với package
+        <groups>
+            <run>
+                <include name="platformWeb"/>
+            </run>
+        </groups>
+        // group với class
+        <groups>
+            <run>
+                <include name="platformMobile"/>
+            </run>
+        </groups>
+
+
+    </test>
+</suite>
