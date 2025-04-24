@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Web UI Automation Testing" verbose="1">
+
+    <parameter name="environmentName" value="Prod"/>
+
+    <test name="Run on FIREFOX" preserve-order="false">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+            <class name="basic.Topic_01_Annotations"/>
+            <class name="basic.Topic_05_Priority"/>
+            <class name="basic.Topic_04_AlwaysRun"/>
+            <class name="basic.Topic_02_Assert"/>
+        </classes>
+    </test>
+
+    <test name="Run on CHROME" preserve-order="true">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="basic.Topic_10_MultipleEnvironment"/>
+            <class name="basic.Topic_04_AlwaysRun"/>
+            <class name="basic.Topic_02_Assert"/>
+            <class name="basic.Topic_05_Priority"/>
+        </classes>
+    </test>
+
+</suite>

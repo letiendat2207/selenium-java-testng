@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Mobile UI Automation Testing" verbose="1" parallel="tests" thread-count="3">
+
+    <parameter name="environmentName" value="Dev"/>
+<!--    <parameter name="platformName" value="Windows"/>-->
+
+    <test name="Run on Samsung">
+        <parameter name="device" value="Samsung"/>
+        <parameter name="device" value="S25 Ultra"/>
+        <classes>
+            <class name="platformMobile.Mobile_01_User"/>
+            <class name="platformMobile.Mobile_02_Payment"/>
+        </classes>
+    </test>
+
+    <test name="Run on iPhone">
+        <parameter name="device" value="iPhone"/>
+        <parameter name="device" value="16 Pro Max"/>
+        <classes>
+            <class name="platformMobile.Mobile_01_User"/>
+            <class name="platformMobile.Mobile_02_Payment"/>
+        </classes>
+    </test>
+    
+</suite>

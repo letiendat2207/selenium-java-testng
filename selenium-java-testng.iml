@@ -6,9 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/selenium" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/testng" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="21" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="libraries (5)" level="project" />
-    <orderEntry type="library" name="libraries" level="project" />
+    <orderEntry type="library" exported="" name="selenium-testng-libraries" level="project" />
   </component>
 </module>

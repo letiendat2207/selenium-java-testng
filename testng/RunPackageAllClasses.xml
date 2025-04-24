@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Web UI Automation Testing" verbose="1" parallel="tests" thread-count="3">
+
+    <parameter name="environmentName" value="Prod"/>
+
+    <test name="Run on FIREFOX">
+        <parameter name="browser" value="Firefox"/>
+        <packages>
+            <package name="basic"/>
+        </packages>
+    </test>
+
+    <test name="Run on CHROME">
+        <parameter name="browser" value="Chrome"/>
+        <packages>
+            <package name="basic"/>
+        </packages>
+    </test>
+
+    <test name="Run on EDGE">
+        <parameter name="browser" value="Edge"/>
+        <packages>
+            <package name="basic"/>
+        </packages>
+    </test>
+
+</suite>
